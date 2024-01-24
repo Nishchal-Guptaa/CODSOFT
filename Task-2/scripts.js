@@ -1,21 +1,38 @@
-function appendValue(value) {
-    document.getElementById('display').value += value;
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+// Home page slide show
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
 
-  function appendOperator(operator) {
-    document.getElementById('display').value += operator;
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
   }
 
-  function clearDisplay() {
-    document.getElementById('display').value = '';
-    document.getElementById('result').innerText = '';
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  function calculate() {
-    try {
-      const result = eval(document.getElementById('display').value);
-      document.getElementById('result').innerText = '= ' + result;
-    } catch (error) {
-      document.getElementById('result').innerText = 'Error';
-    }
-  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+
+  setTimeout(showSlides, 4000); // Change slide every 2 seconds
+}
