@@ -1,42 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Calculator</title>
+    <title>Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-    <div id="calculator">
-        <input type="text" id="display" readonly>
-        <div>
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="appendOperator('+')">+</button>
+    <!-- Navbar -->
+    <header>
+        <div class="header1">
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+
+                <button id="call-us-btn">Request a Consultant</button>
+                <div id="phone-number">demomail@gmail.com | +1234567890</div>
+            </div>
         </div>
-        <div>
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button onclick="appendOperator('-')">-</button>
+        <div class="header2">
+            <nav>
+                <div class="logo"><img src="Landing Page.png" alt="landing page"></div>
+
+                <div class="topnav" id="myTopnav">
+                    <a href="#home">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#about">Page</a>
+                    <a href="#services">Services</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Buy Now</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
         </div>
-        <div>
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="appendOperator('*')">*</button>
+    </header>
+
+    <!-- Home -->
+    <div class="home" id="home">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="image1.jpg" alt="Slide 1">
+                <div class="slide-text">
+                    <h3>Create Digital Agency</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#">Read More</a>
+                    <a href="#">Request a Consultant</a>
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <img src="image2.jpg" alt="Slide 2">
+                <div class="slide-text">
+                    <h3>Get An Expert Advice</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#">Read More</a>
+                    <a href="#">Request a Consultant</a>
+                </div>
+            </div>
+
+            <div class="mySlides">
+                <img src="image3.jpg" alt="Slide 3">
+                <div class="slide-text">
+                    <h3>Our Exclusive Offers</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <a href="#">Read More</a>
+                    <a href="#">Request a Consultant</a>
+                </div>
+            </div>
+
+            <!-- Add more slides as needed -->
+
+            <!-- Navigation dots -->
+            <div class="dot-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots based on the number of slides -->
+            </div>
         </div>
-        <div>
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendValue('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="appendOperator('/')">/</button>
+    </div>
+    <div class="strip">
+        <div class="cont" id="one">
+            <div class="esehi">
+                <i class="fa fa-rocket"></i>
+                <h3>LAUNCH BUSINESS</h3>
+            </div>
+            <P>Lorem ipsum dolor sit amet.</P>
         </div>
-        <div id="result"></div>
-      </div>
+        <div class="cont" id="two">
+            <div class="esehi">
+                <i class="fa fa-headphones"></i>
+                <h3>ONLINE SUPPORT TEAM</h3>
+            </div>
+            <P>Lorem ipsum dolor sit amet.</P>
+        </div>
+        <div class="cont" id="three">
+            <div class="esehi">
+                <i class="fa fa-clock"></i>
+                <h3>TIME MANAGEMENT</h3>
+            </div>
+            <P>Lorem ipsum dolor sit amet.</P>
+        </div>
+    </div>
+    <!-- About -->
+    <div class="about-us" id="about">
+        <div class="box-1">
+            <h2>ABOUT US</h2>
+            <h4>15 years, we passionate about achieving better results for our clients</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem error nihil voluptatibus facere eaque
+                repudiandae voluptates officiis aliquam possimus laudantium obcaecati mollitia quaerat expedita porro
+                minima corrupti aliquid, recusandae maiores.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="box-2">
+            <img src="about image.jpg" alt="img">
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="services" id="services">
+        <div class="s-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="s-img">
+            <div class="box">
+                <!-- image -->
+                <div class="image">
+                    <img src="User exp.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>USER EXPERIENCE</h2>
+                </div>
+            </div>
+            <div class="box">
+                <!-- image -->
+                <div class="image">
+                    <img src="creative design.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>CREATIVE DESIGH</h2>
+                </div>
+            </div>
+            <div class="box">
+                <!-- image -->
+                <div class="image">
+                    <img src="retina ready.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h2>RETINA READY</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
